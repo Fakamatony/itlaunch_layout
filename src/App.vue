@@ -1,15 +1,21 @@
 <template >
   <div id="app" >
-    <v-main-wrapper/>
+    <v-header/>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <v-footer/>
   </div>
 </template>
 
 <script>
-import VMainWrapper from '@/components/v-main-wrapper.vue';
+import VHeader from '@/components/static/v-header.vue';
+import VFooter from '@/components/static/v-footer.vue';
 export default {
   name: 'App',
   components: {
-    VMainWrapper,
+    VHeader,
+    VFooter,
   }
 }
 </script>

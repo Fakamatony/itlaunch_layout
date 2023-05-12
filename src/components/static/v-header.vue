@@ -1,14 +1,43 @@
 <template>
   <div class="v-header">
       <div class="v-header__logo">
-        <img class="logo-size" src="@/assets/images/logo.svg">
+        <router-link to="/">
+          <img class="logo-size" src="@/assets/images/icons/logo.svg">
+        </router-link>
       </div>
     <div class="v-header__nav black-font">
-      <span>О компании</span>
-      <span>Акции</span>
-      <span>Сертификаты</span>
-      <span>Доставка и оплата</span>
-      <span class="no-margin">Контакты</span>
+
+      <span class="pointer">
+        <router-link class="no-link" to="about">
+          О компании
+        </router-link>
+      </span>
+
+      <span class="pointer">
+        <router-link class="no-link" to="sales">
+          Акции
+        </router-link>
+      </span>
+
+      <span class="pointer">
+        <router-link class="no-link" to="certs">
+          Сертификаты
+        </router-link>
+      </span>
+
+      <span class="pointer">
+        Доставка и оплата
+      </span>
+
+      <span class="no-margin pointer">
+        <router-link class="no-link" to="contacts">
+          Контакты
+        </router-link>
+      </span>
+
+    </div>
+    <div class="v-header__burger">
+      <img class="burger-size" src="@/assets/images/icons/menu_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
   </div>
 </template>
@@ -36,6 +65,11 @@ export default {
       justify-content: end;
       font-size: 1.3vw;
       width: 80%;
+      margin-right: 5%;
+
+    }
+    &__burger{
+      display: none;
     }
   }
   .logo-size{
@@ -44,5 +78,34 @@ export default {
   }
   span{
     margin-right: 5%;
+  }
+  span:hover{
+    -webkit-text-stroke: 0.5px black;
+  }
+  @media screen and (max-width: 530px) {
+    .v-header__nav{
+      display: none;
+    }
+    .v-header__logo{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .v-header__burger{
+      display: flex;
+      width: 50%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+    }
+    .logo-size{
+      width: 20vw;
+      height: 85px;
+    }
+    .burger-size{
+      width: 20vw;
+      height: 85px;
+    }
   }
 </style>
