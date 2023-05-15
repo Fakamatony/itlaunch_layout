@@ -48,7 +48,7 @@ export default {
 <style lang="scss">
 .v-about-item{
   width: 100%;
-  height: 600px;
+  height: 750px;
   &__heading{
     width: 100%;
     height: 50%;
