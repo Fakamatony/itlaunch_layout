@@ -11,16 +11,44 @@
           </p>
         </div>
       </div>
-      <div class="v-footer-content__nav white-font pointer">
-        <span class="pointer">Отечественные</span>
-        <span class="pointer">Иномарки / Коммерческие</span>
-        <span class="pointer">Доставка и оплата</span>
-        <span class="no-margin pointer">Акции</span>
+      <div class="v-footer-content__nav white-font ">
+        <span class="pointer">
+          <router-link class="no-link-white" to="local-brands">
+            Отечественные
+          </router-link>
+        </span>
+        <span class="pointer">
+          <router-link class="no-link-white" to="foreign-brands">
+            Иномарки / Коммерческие
+          </router-link>
+        </span>
+        <span class="pointer">
+          <router-link class="no-link-white" to="delivery">
+            Доставка и оплата
+          </router-link>
+        </span>
+        <span class="pointer">
+          <router-link class="no-link-white" to="sales">
+            Акции
+          </router-link>
+        </span>
       </div>
-      <div class="v-footer-content__nav white-font pointer">
-        <span class="pointer">О компании</span>
-        <span class="pointer">Контакты</span>
-        <span class="pointer">Сертификаты</span>
+      <div class="v-footer-content__nav ">
+        <span class="pointer">
+          <router-link class="no-link-white" to="about">
+            О компании
+          </router-link>
+        </span>
+        <span class="pointer">
+          <router-link class="no-link-white" to="contacts">
+            Контакты
+          </router-link>
+        </span>
+        <span class="pointer">
+          <router-link class="no-link-white" to="certs">
+            Сертификаты
+          </router-link>
+        </span>
       </div>
     </div>
   </div>
