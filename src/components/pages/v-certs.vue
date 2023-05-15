@@ -6,7 +6,7 @@
         v-for="picture in pictures"
         :key="picture.id"
         class="image"
-        :src=" require('@/assets/images/certs/' + picture.img)">
+        :src=" require('@/assets/images/other/certs/' + picture.img)">
     </div>
   </div>
 </template>

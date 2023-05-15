@@ -1,15 +1,19 @@
 <template>
   <div class="v-main-wrapper container-fluid">
     <v-slider/>
-    <div class="filters-items">
-      <div class="filters-items__item black-font pointer">
-        <span>Отечественные машины</span>
-        <img class="per90" src="@/assets/images/russianCars.svg" alt="">
-      </div>
-      <div class="filters-items__item yellow-font pointer">
-        <span>Иномарки / Коммерческие</span>
-        <img class="per90" src="@/assets/images/noRussianCars.svg" alt="">
-      </div>
+    <div class="filters-items black-font">
+      <router-link class="no-link filters-items__item pointer" to="local-brands">
+        <div>
+          <span>Отечественные машины</span>
+          <img class="per90" src="@/assets/images/russianCars.svg" alt="">
+        </div>
+      </router-link>
+      <router-link class="no-link filters-items__item pointer" to="foreign-brands">
+        <div>
+          <span>Иномарки / Коммерческие</span>
+          <img class="per90" src="@/assets/images/noRussianCars.svg" alt="">
+        </div>
+      </router-link>
     </div>
     <div class="card-items">
       <div
@@ -144,6 +148,11 @@ export default {
       align-items: center;
       justify-content: start;
     }
+    &__item:hover{
+      width: 55%;
+      color: #F7AD00;
+      transition: 200ms ease;
+    }
   }
   .card-items{
     width: 80%;
@@ -165,7 +174,9 @@ export default {
       border: 1px solid lightgrey;
       font-size: 1.2vw;
       &:hover{
+        width: 290px;
         border:1px solid #F7AD00;
+        transition: 200ms ease;
       }
     }
   }

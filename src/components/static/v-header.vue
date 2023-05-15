@@ -26,7 +26,9 @@
       </span>
 
       <span class="pointer">
-        Доставка и оплата
+        <router-link class="no-link" to="delivery">
+          Доставка и оплата
+        </router-link>
       </span>
 
       <span class="no-margin pointer">
@@ -83,28 +85,35 @@ export default {
     -webkit-text-stroke: 0.5px black;
   }
   @media screen and (max-width: 530px) {
-    .v-header__nav{
-      display: none;
+    .v-header{
+      width: 80%;
+      margin: 0 10% 0 10%;
+      height: 80px;
+      &__nav{
+        display: none;
+      }
+      &__logo{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+      }
+      &__burger{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+      }
     }
-    .v-header__logo{
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .v-header__burger{
-      display: flex;
-      width: 50%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: end;
-    }
+
     .logo-size{
-      width: 20vw;
+      width: 10vw;
       height: 85px;
     }
     .burger-size{
-      width: 20vw;
+      width: 10vw;
       height: 85px;
     }
   }

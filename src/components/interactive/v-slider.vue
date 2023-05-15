@@ -30,9 +30,8 @@ export default defineComponent({
   data(){
     return{
       slides:[
-        {img:'1.jpg', id: 1},
-        {img:'2.jpg', id: 2},
-        {img:'3.jpg', id: 3}
+        {img:'1.svg', id: 1},
+        {img:'2.svg', id: 2},
       ]
     }
   }
@@ -52,7 +51,6 @@ export default defineComponent({
       width: 100%;
       height: 500px;
       margin: 0 10% 0 10%;
-      background-color: #464646;
     }
   }
   .image{
@@ -72,7 +70,6 @@ export default defineComponent({
         width: 100%;
         height: 184px;
         margin: 0 10% 0 10%;
-        background-color: #464646;
       }
     }
     .image{
